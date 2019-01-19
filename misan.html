@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>弥散阴影</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        .box{
+            border: 0px;
+            outline: none;
+            display: inline-block;
+            width: 209px;
+            height: 250px;
+            background-color: #409eff;
+            border-radius: 6px;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size:22px ;
+            position: relative;
+            transition: all 0.3s ease-out;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .box:before {
+            content: "";
+            background: inherit;
+            width: calc(100% - 18px);
+            height: 250px;
+            border-radius: 4px;
+            display: inline-block;
+            position: absolute;
+            left: 10px;
+            bottom: -10px;
+            z-index: -1;
+            filter: blur(10px) brightness(0.95);
+        }
+        .box:hover {
+            background: #3B69C3;
+            box-shadow: 0 16px 24px 0 rgba(23, 57, 126, .15), 0 4px 8px 0 rgba(30, 62, 124, .15)
+        }
+    </style>
+</head>
+<body>
+<div>
+    <button class="box">Superme</button>
+</div>
+
+</body>
+</html>
